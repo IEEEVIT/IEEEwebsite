@@ -2,12 +2,12 @@
 	#'action' for the form in actual 'contact us' page goes to this.
 	require 'connect_db.php';
 	
-	$firstname=($_POST['firstname']);
-	$lastname=($_POST['lastname']);
-	$email=($_POST['email']);
-	$phone=($_POST['phone']);
-	$regno=($_POST['regno']);
-	$message=($_POST['message']);
+	$firstname=$conn->real_escape_string($_POST['firstname']);
+	$lastname=$conn->real_escape_string($_POST['lastname']);
+	$email=$conn->real_escape_string($_POST['email']);
+	$phone=$conn->real_escape_string($_POST['phone']);
+	$regno=$conn->real_escape_string($_POST['regno']);
+	$message=$conn->real_escape_string($_POST['message']);
 	
 	$sql="CREATE TABLE IF NOT EXISTS `contactus` (
 		  `id` int(11) NOT NULL AUTO_INCREMENT,
