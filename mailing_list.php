@@ -5,10 +5,10 @@
 	//to 1 (confirmed user) is handled by 'subscribe.php' file
 	require 'connect_db.php';
 	
-	$firstname=$_POST['firstname'];
-	$lastname=$_POST['lastname'];
-	$regno=$_POST['regno'];
-	$to_address=$_POST['email'];
+	$firstname=$conn->real_escape_string($_POST['firstname']);
+	$lastname=$conn->real_escape_string($_POST['lastname']);
+	$regno=$conn->real_escape_string($_POST['regno']);
+	$to_address=$conn->real_escape_string($_POST['email']);
 	
 	$sql="CREATE TABLE IF NOT EXISTS `mailinglist` (
 			`id` int(11) NOT NULL AUTO_INCREMENT,
