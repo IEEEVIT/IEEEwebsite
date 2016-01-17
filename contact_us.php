@@ -1,4 +1,12 @@
 <?php
+	//slight server-side verification
+	if(!(($_POST['firstname']) && ($_POST['lastname']) && ($_POST['email']) && ($_POST['phone']) && ($_POST['regno']) && ($_POST['message'])))
+	{
+		//Invalid input html code
+		echo "Invalid input";
+		exit();
+	}
+	
 	#'action' for the form in actual 'contact us' page goes to this.
 	require 'connect_db.php';
 	
