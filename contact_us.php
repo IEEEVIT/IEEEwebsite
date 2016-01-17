@@ -2,8 +2,8 @@
 	//slight server-side verification
 	if(!(($_POST['firstname']) && ($_POST['lastname']) && ($_POST['email']) && ($_POST['phone']) && ($_POST['regno']) && ($_POST['message'])))
 	{
-		//Invalid input html code
-		echo "Invalid input";
+		//Invalid input html code, manipulation done.
+		echo "LOL u Script Kiddie.";
 		exit();
 	}
 	
