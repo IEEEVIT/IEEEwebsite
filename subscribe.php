@@ -16,6 +16,7 @@
 				echo "Some error: ".$conn->error;
 				exit();
 			}
+			$conn->close();
 		}
 		else if($_REQUEST['flag']=="unsubscribe")
 		{
@@ -32,6 +33,7 @@
 				echo "Some error.";
 				exit();
 			}
+			$conn->close();
 		}
 	}
 	else

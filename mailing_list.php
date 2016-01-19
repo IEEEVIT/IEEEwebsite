@@ -51,4 +51,5 @@
 		echo "Some error";
 		exit();
 	}
+	$conn->close();
 ?>
