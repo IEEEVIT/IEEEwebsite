@@ -1,0 +1,139 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.navbar{
+   background-color: #ecf0f1;
+
+}
+
+.intro-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+
+    background-image: url(../img/header-bg.jpg);
+    background-repeat: none;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #34495e;
+    color:#ecf0f1;
+}
+
+.board-section{
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #ecf0f0;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #34495e;
+    color:#ecf0f1;
+}
+
+.page-heading{
+    font-size: 100px;
+}
+
+.about-column{
+    padding-top: 40px;
+}
+
+
+#navbar-logo{
+    height: 25px;
+}
+
+input, textarea{
+    background: #ecf0f1 !important;
+}
+
+#main-mailinglist-form{
+    margin-top: 18%;
+}
+
+#main-mail-form{
+    width: 75%;
+}
+
+#mid-about-column{
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+#main-paragraph {
+    padding-top: 2%;
+}
+
+#mail-signup {
+    width: 100%;
+}
+
+#contact-mid{
+    margin-top:100px;
+}
+#contact-bottom {
+    margin-top: 200px;
+}
+
+.board-members{
+    margin-top: 125px;  
+}
+
+button{
+    color: #34495e !important;
+    background: #ecf0f1 !important;
+}
+
+button:hover{
+    color: #587ca0 !important;
+    background: white !important;
+}
+
+#facebook-logo{
+    width: 25px;
+}
+#facebook-text{
+    color: #4d70ba;
+    font-size: 18px;
+}
