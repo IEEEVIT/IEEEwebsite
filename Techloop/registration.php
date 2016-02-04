@@ -27,10 +27,10 @@
 		$links = mysqli_real_escape_string($link, $links);
 	    $ins = mysqli_query($link, "INSERT INTO speakerdetails(FirstName,LastName,RegNo,Contact,Email,Expertise,Other,Topic,Date,Experience,Projects,Links) VALUES ('$firstName','$lastName','$regNo','$contact','$email','$expertise','$other','$topic','$dat','$experience','$projects','$links')");
 
-        require 'libraries/PHPMailer/PHPMailerAutoload.php';
-        require 'mail_functions.php';
-        $recipients[0]['name'] = $firstName . ' ' . $lastName;
-        $recipients[0]['email'] = $email;
+        //require 'libraries/PHPMailer/PHPMailerAutoload.php';
+       // require 'mail_functions.php';
+        //$recipients[0]['name'] = $firstName . ' ' . $lastName;
+        //$recipients[0]['email'] = $email;
         //$body = file_get_contents('html_files/mails/registered_speakers_mail.html');
         //$altBody = null;
         //sendMail($recipients, 'Speaker Registration', $body, $altBody);
@@ -232,16 +232,8 @@
         }
         echo '<div class="subscribe">
                 <h2>Subscribe</h2>
-                <p>to receive regular updates by email</p>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-user"></i>
-                    <input type = "text" id = "subscriberName" placeholder = "Your Name"/>
-                </div>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-envelope"></i>
-                    <input type = "text" id = "subscriberEmail" placeholder = "Your E-Mail ID"/>
-                </div>
-                <button class = "submitSubscriber"><i class = "fa fa-chevron-right"></i></button>
+                <p>Please visit our main page to subscribe, for all the updates.</p>
+                <a href="..">IEEE-VIT</a>
                 <p class = "subscriberFeedback"></p>
             </div>
         </div>';

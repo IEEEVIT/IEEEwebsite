@@ -107,16 +107,8 @@
 			</div>
             <div class="subscribe">
                 <h2>Subscribe</h2>
-                <p>to receive regular updates by email</p>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-user"></i>
-                    <input type = "text" id = "subscriberName" placeholder = "Your Name"/>
-                </div>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-envelope"></i>
-                    <input type = "text" id = "subscriberEmail" placeholder = "Your E-Mail ID"/>
-                </div>
-                <button class = "submitSubscriber"><i class = "fa fa-chevron-right"></i></button>
+                <p>Please visit our main page to subscribe, for all the updates.</p>
+                <a href="..">IEEE-VIT</a>
                 <p class = "subscriberFeedback"></p>
             </div>
 		</div>
