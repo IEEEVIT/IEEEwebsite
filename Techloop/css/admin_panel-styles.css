@@ -1,0 +1,137 @@
+/*--------------------Admin Panel Styles---------------------*/
+.navbar {
+	position: fixed;
+	width: 100%;
+	background-color: #EEEEEE;
+	font-family: roboto, sans-serif;
+	z-index: 99999999;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar img {
+	width: 100px;
+	padding: 20px;
+	float: left;
+}
+.navbar h2 {
+	margin-top: 22px;
+	font-weight: 600;
+	font-size: 24px;
+	float: left;
+	color: #004d40;
+}
+.navbar a {
+	float: right;
+	color: white;
+	font-weight: 600;
+	background-color: #F44336;
+	padding: 12px;
+	border-radius: 5px;
+	margin: 15px;
+	text-decoration: none;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar a:hover {
+	background-color: #e53935;
+	-webkit-transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar a:active {
+	-webkit-transform: translateY(5px);
+	    -ms-transform: translateY(5px);
+	        transform: translateY(5px);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container {
+	padding: 0;
+	font-family: roboto, sans-serif;
+}
+.row {
+	overflow: hidden;
+}
+.sidebar {
+	width: 230px !important;
+	position: fixed;
+	padding-top: 100px;
+	background-color: #F5F5F5;
+	box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+	height: 100vh;
+	z-index: 10;
+}
+.sidebar a {
+	font-size: 16px;
+	display: block;
+	padding: 15px;
+	margin: 5px 0px;
+	padding-left: 25px;
+	color: #263238;
+	text-decoration: none;
+	-webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar a:hover {
+	background-color: #004d40;
+	color: white;
+	border-radius: 2px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar .active {
+	background-color: #004d40;
+	color: white;
+	border-radius: 2px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.main {
+	margin-left: 230px;
+	padding: 30px;
+	padding-top: 100px;
+	background-color: #fafafa;
+	font-family: roboto, sans-serif;
+}
+.main h1 {
+	font-size: 25px;
+	color: #004d40;
+	margin: 10px;
+}
+.main p {
+	color: #F44336;
+	margin: 10px;
+}
+.functions {
+	margin-top: 25px;
+}
+.functions a {
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	display: block;
+	width: 30%;
+	float: left;
+	padding: 20px;
+	margin: 20px;
+	background-color: #e53935;
+	font-weight: 600;
+	font-size: 18px;
+	border-radius: 2px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.functions a:hover {
+	background-color: #d32f2f;
+	-webkit-transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.functions a:active {
+	-webkit-transform: translateY(5px);
+	    -ms-transform: translateY(5px);
+	        transform: translateY(5px);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*-----------------------------------------------------------*/

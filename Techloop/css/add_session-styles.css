@@ -1,0 +1,233 @@
+/*--------------------Admin Panel Styles---------------------*/
+.navbar {
+	position: fixed;
+	width: 100%;
+	background-color: #EEEEEE;
+	font-family: roboto, sans-serif;
+	z-index: 99999999;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar img {
+	width: 100px;
+	padding: 20px;
+	float: left;
+}
+.navbar h2 {
+	margin-top: 22px;
+	font-weight: 600;
+	font-size: 24px;
+	float: left;
+	color: #004d40;
+}
+.navbar a {
+	float: right;
+	color: white;
+	font-weight: 600;
+	background-color: #F44336;
+	padding: 12px;
+	border-radius: 5px;
+	margin: 15px;
+	text-decoration: none;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar a:hover {
+	background-color: #e53935;
+	-webkit-transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar a:active {
+	-webkit-transform: translateY(5px);
+	    -ms-transform: translateY(5px);
+	        transform: translateY(5px);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container {
+	padding: 0;
+	font-family: roboto, sans-serif;
+}
+.row {
+	overflow: hidden;
+}
+.sidebar {
+	width: 230px !important;
+	position: fixed;
+	padding-top: 100px;
+	background-color: #F5F5F5;
+	box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+	height: 100vh;
+	z-index: 10;
+}
+.sidebar a {
+	font-size: 16px;
+	display: block;
+    margin: 5px 0;
+    padding: 15px 15px 15px 25px;
+    color: #263238;
+	text-decoration: none;
+	-webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar a:hover {
+	background-color: #004d40;
+	color: white;
+	border-radius: 2px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar .active {
+	background-color: #004d40;
+	color: white;
+	border-radius: 2px;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.main {
+	margin-left: 230px;
+    padding: 100px 30px 30px;
+    background-color: #fafafa;
+	font-family: roboto, sans-serif;
+}
+h4 {
+	color: #01579B;
+	font-weight: 600;
+	font-size: 18px;
+    margin: 10px 10px 10px 0;
+}
+p {
+	color: #212121;
+    margin: 5px 5px 5px 0;
+}
+p a {
+	font-weight: 600;
+	color: #212121;
+	text-decoration: none;
+}
+.instructions {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F4F4F4;
+	padding: 25px;
+	margin-top: 40px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.form {
+    padding: 10px 25px 25px;
+    font-family: roboto, sans-serif;
+}
+.form h2 {
+	font-size: 28px;
+	font-weight: 600;
+	color: #004d40;
+	text-align: center;
+    margin: 100px 35px 30px;
+}
+form p {
+    color: #004D40;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+    text-align: center;
+}
+.form textarea {
+    width: 380px;
+    height: 150px;
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    border: 1px solid #eeeeee;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.26);
+    color: #263238;
+    -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form textarea:focus {
+    background-color: #f5f5f5;
+    outline: none;
+    -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form input {
+	width: 350px;
+	display: block;
+    margin: 20px auto;
+    padding: 12px;
+	border: 1px solid #eeeeee;
+	border-radius: 2px;
+	outline: none;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.26);
+	color: #263238;
+	-webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form input[type="file"] {
+    margin-top: 11px;
+    width: 400px;
+}
+.form input:focus {
+	background-color: #f5f5f5;
+	outline: none;
+	-webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form div {
+    clear: both;
+    overflow: hidden;
+    width: 420px;
+    margin: 25px auto 0;
+}
+.form input[type="checkbox"] {
+    float: left;
+    display: block;
+    width: 13px;
+    margin: 0;
+    box-shadow: none;
+}
+.form label {
+    float: left;
+    display: block;
+    width: 400px;
+    padding-left: 10px;
+    margin: 0;
+}
+.form .error {
+    margin: 15px auto;
+    text-align: center;
+    font-size: 14px;
+    color:  #f44336;
+}
+.form input[type="submit"] {
+	display: block;
+	width: 200px;
+	padding: 13px;
+    margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F44336;
+	color: white;
+	font-weight: 600;
+	font-size: 18px;
+	border: none;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form input[type="submit"]:hover {
+	background-color: #e53935;
+	-webkit-transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form input[type="submit"]:active {
+	-webkit-transform: translateY(5px);
+	    -ms-transform: translateY(5px);
+	        transform: translateY(5px);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*-----------------------------------------------------------*/

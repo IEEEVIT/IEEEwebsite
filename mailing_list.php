@@ -5,15 +5,13 @@
 	//to 1 (confirmed user) is handled by 'subscribe.php' file
 	require 'connect_db.php';
 	
-	$firstname=$conn->real_escape_string($_POST['firstname']);
-	$lastname=$conn->real_escape_string($_POST['lastname']);
+	$name=$conn->real_escape_string($_POST['name']);
 	$regno=$conn->real_escape_string($_POST['regno']);
 	$to_address=$conn->real_escape_string($_POST['email']);
 	
 	$sql="CREATE TABLE IF NOT EXISTS `mailinglist` (
 			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`firstname` varchar(30) DEFAULT NULL,
-			`lastname` varchar(30) DEFAULT NULL,
+			`name` varchar(30) DEFAULT NULL,
 			`regno` varchar(9) DEFAULT NULL,
 			`email` varchar(40) DEFAULT NULL,
 			`status` int(11) DEFAULT NULL,
@@ -22,7 +20,7 @@
 	$conn->query($sql);
 	
 	//status bit is defaulted to NULL
-	$sql="INSERT INTO mailinglist(firstname,lastname,regno,email) VALUES('$firstname','$lastname','$regno','$to_address');";
+	$sql="INSERT INTO mailinglist(name,regno,email) VALUES('$name','$regno','$to_address');";
 	if($conn->query($sql))
 	{
 		//successfully added in list, with status=0 (unconfirmed)
