@@ -25,7 +25,6 @@
 		<i class="fa fa-bars menu"></i>
 		<img src="img/small-logo.png" alt="Small Logo" class="small-logo">
 		<ul class="navlist">
-			<li><a href="..">IEEE-VIT</a></li>
 			<li><a href="index.php">Home</a></li>
 			<li><a href="sessions.php">Sessions</a></li>
 			<li><a href="registration.php">Take a Session</a></li>
@@ -134,11 +133,19 @@
                     </div>');
 			}
             echo '<div class="subscribe">
-                <h2>Subscribe</h2>
-                <p>Please visit our main page to subscribe, for all the updates.</p>
-                <a href="..">IEEE-VIT</a>
-                <p class = "subscriberFeedback"></p>
-            </div>
+                    <h2>Subscribe</h2>
+                    <p>to receive regular updates by email</p>
+                    <div class = "subscribeInput">
+                        <i class = "fa fa-user"></i>
+                        <input type = "text" id = "subscriberName" placeholder = "Your Name"/>
+                    </div>
+                    <div class = "subscribeInput">
+                        <i class = "fa fa-envelope"></i>
+                        <input type = "text" id = "subscriberEmail" placeholder = "Your E-Mail ID"/>
+                    </div>
+                    <button class = "submitSubscriber"><i class = "fa fa-chevron-right"></i></button>
+                    <p class = "subscriberFeedback"></p>
+                </div>
             </div>';
 	?>
 	</div>

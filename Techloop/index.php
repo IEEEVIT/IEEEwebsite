@@ -58,11 +58,10 @@
 		<i class="fa fa-bars menu"></i>
 		<img src="img/small-logo.png" alt="Small Logo" class="small-logo">
 		<ul class="navlist">
-			<li><a href="..">IEEE-VIT</a></li>
 			<li><a href="index.php" class="active">Home</a></li>
 			<li><a href="sessions.php">Sessions</a></li>
 			<li><a href="registration.php">Take a Session</a></li>
-			<li><a href="about.php">About Techloop</a></li>
+			<li><a href="about.php">About Us</a></li>
 		</ul>
 		<div class="searchbar">
 			<i class="fa fa-search"></i>
@@ -85,8 +84,16 @@
 			</div>
             <div class="subscribe">
                 <h2>Subscribe</h2>
-                <p>Please visit our main page to subscribe, for all the updates.</p>
-                <a href="..">IEEE-VIT</a>
+                <p>to receive regular updates by email</p>
+                <div class = "subscribeInput">
+                    <i class = "fa fa-user"></i>
+                    <input type = "text" id = "subscriberName" placeholder = "Your Name"/>
+                </div>
+                <div class = "subscribeInput">
+                    <i class = "fa fa-envelope"></i>
+                    <input type = "text" id = "subscriberEmail" placeholder = "Your E-Mail ID"/>
+                </div>
+                <button class = "submitSubscriber"><i class = "fa fa-chevron-right"></i></button>
                 <p class = "subscriberFeedback"></p>
             </div>
 		</div>
