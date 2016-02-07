@@ -1,6 +1,6 @@
 <?php
 	//slight server-side verification
-	if(!(($_POST['name'])&& ($_POST['email']) && ($_POST['phone']) && ($_POST['regno']) && ($_POST['message'])))
+	if(!(($_POST['firstname']) && ($_POST['lastname']) && ($_POST['email']) && ($_POST['phone']) && ($_POST['regno']) && ($_POST['message'])))
 	{
 		//Invalid input html code, manipulation done.
 		echo "LOL u Script Kiddie.";
@@ -10,7 +10,8 @@
 	#'action' for the form in actual 'contact us' page goes to this.
 	require 'connect_db.php';
 	
-	$name=$conn->real_escape_string($_POST['name']);
+	$firstname=$conn->real_escape_string($_POST['firstname']);
+	$lastname=$conn->real_escape_string($_POST['lastname']);
 	$email=$conn->real_escape_string($_POST['email']);
 	$phone=$conn->real_escape_string($_POST['phone']);
 	$regno=$conn->real_escape_string($_POST['regno']);
@@ -18,7 +19,8 @@
 	
 	$sql="CREATE TABLE IF NOT EXISTS `contactus` (
 		  `id` int(11) NOT NULL AUTO_INCREMENT,
-		  `name` varchar(40) DEFAULT NULL,
+		  `firstname` varchar(15) DEFAULT NULL,
+		  `lastname` varchar(30) DEFAULT NULL,
 		  `email` varchar(40) DEFAULT NULL,
 		  `phone` varchar(10) DEFAULT NULL,
 		  `regno` varchar(9) DEFAULT NULL,
@@ -33,7 +35,7 @@
 		exit();
 	}
 	
-	$sql="INSERT INTO contactus(name,email,phone,regno,message) VALUES('$name','$email','$phone','$regno','$message');";
+	$sql="INSERT INTO contactus(firstname,lastname,email,phone,regno,message) VALUES('$firstname','$lastname','$email','$phone','$regno','$message');";
 	if($conn->query($sql))
 	{
 		// The page with 'successfully message sent' html.
