@@ -1,0 +1,81 @@
+/*---------------------Login Styles-----------------------*/
+body {
+	background-color: #fafafa;
+	background-image: url("../img/carousel-4.png");
+	background-size: cover;
+}
+.loginForm {
+	background-color: #eeeeee;
+	padding: 25px;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.26);
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 17vh;
+	border-radius: 2px;
+	font-family: roboto, sans-serif;
+	font-size: 18px;
+}
+.loginForm h2 {
+	font-size: 35px;
+	font-weight: 600;
+	color: #004d40;
+	text-align: center;
+	margin: 30px;
+}
+.loginForm .error {
+	text-align: center;
+	font-size: 14px;
+	color:  #f44336;
+}
+.loginForm input {
+	width: 320px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	border: 1px solid #eeeeee;
+	border-radius: 2px;
+	outline: none;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.26);
+	color: #263238;
+	-webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.loginForm input:focus {
+	background-color: #f5f5f5;
+	outline: none;
+	-webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.loginForm input[type="submit"] {
+	display: block;
+	width: 200px;
+	padding: 15px;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	background-color: #F44336;
+	color: white;
+	font-weight: 600;
+	font-size: 20px;
+	border: none;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.loginForm input[type="submit"]:hover {
+	background-color: #e53935;
+	-webkit-transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.loginForm input[type="submit"]:active {
+	-webkit-transform: translateY(5px);
+	    -ms-transform: translateY(5px);
+	        transform: translateY(5px);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*--------------------------------------------------------*/
