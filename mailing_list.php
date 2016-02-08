@@ -19,13 +19,13 @@
 		) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
 	$conn->query($sql);
 	
-	//status bit is defaulted to NULL
-	$sql="INSERT INTO mailinglist(name,regno,email) VALUES('$name','$regno','$to_address');";
+	//status bit is defaulted to NULL. only email inserted now. Rest after confirmation is received.
+	$sql="INSERT INTO mailinglist(email) VALUES('$to_address');";
 	if($conn->query($sql))
 	{
 		//successfully added in list, with status=0 (unconfirmed)
 		
-		$confirm_link='<a href="http://localhost/ieee_new_website/subscribe.php?flag=subscribe&regno='.$regno.'">Confirm</a>';
+		$confirm_link='<a href="http://localhost/ieee_new_website/subscribe_form.html">Confirm</a>';
 		$message="<html><body><p> Click confirm to confirm subscription. </p><p>".$confirm_link."</p></body></html>";
 		$subject="Subscription Comfirmation";
 		
@@ -41,12 +41,14 @@
 		}
 		else
 		{
-			echo "Error : ".$mail->ErrorInfo;
+			include('error.html');
+			//echo "Error : ".$mail->ErrorInfo;
 		}
 	}
 	else
 	{
-		echo "Some error";
+		include('error.html');
+		//echo "Some error";
 		exit();
 	}
 	$conn->close();

@@ -6,7 +6,8 @@
 	
 	if(!$conn=new mysqli($server,$username,$password,$db))
 	{
-		echo $conn->connect_error;
+		include('error.html');
+		//echo $conn->connect_error;
 		exit();
 	}
 ?>

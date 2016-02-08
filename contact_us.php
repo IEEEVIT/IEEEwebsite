@@ -29,7 +29,8 @@
 	if(!$conn->query($sql))
 	{
 		//The error report html.
-		echo "Some error";
+		//echo "Some error";
+		include('error.html');
 		exit();
 	}
 	
@@ -42,7 +43,8 @@
 	else
 	{
 		//error report html.
-		echo "Some error";
+		include('error.html');
+		//echo "Some error";
 		exit();
 	}
 	

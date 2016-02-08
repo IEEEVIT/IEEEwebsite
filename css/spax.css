@@ -1,0 +1,31 @@
+@font-face { font-family: Roboto; url(https://fonts.googleapis.com/css?family=Roboto); } 
+
+
+
+.spax-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #34495e;
+    color:#ecf0f1;
+}
+
+.spax-image {
+	padding: 10px;
+}
+
+.spax-col {
+	padding: 20px;
+}
+
+.spax-text {
+	padding-top:20px; 
+	font-size: 18px;
+	font-family: Roboto, sans-serif;
+}
+
+.epics-text{
+	padding-top:20px; 
+	font-size: 14px;
+	font-family: Roboto, sans-serif;
+}
