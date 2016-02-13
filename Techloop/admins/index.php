@@ -27,7 +27,7 @@
 			mysqli_close($link);
 		}
 	}
-	if(isset($_SESSION['login_user']) == "techloop_admin"){
+	if(isset($_SESSION['login_user']) == "ieee_admin"){
 		header("location: admin_panel.php");
 	}
 ?>

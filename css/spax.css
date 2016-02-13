@@ -3,7 +3,7 @@
 
 
 .spax-section {
-    height: 100%;
+    height: 130%;
     padding-top: 150px;
     text-align: center;
     background: #34495e;
@@ -20,8 +20,21 @@
 
 .spax-text {
 	padding-top:20px; 
-	font-size: 18px;
+	font-size: 30px;
 	font-family: Roboto, sans-serif;
+}
+
+#ull {
+	font-size: 20px;
+	text-align:left;
+}
+
+#spp {
+	font-size: 18px;
+}
+
+#epp {
+	font-size: 15px;
 }
 
 .epics-text{

@@ -63,10 +63,10 @@
 		<i class="fa fa-bars menu"></i>
 		<img src="img/small-logo.png" alt="Small Logo" class="small-logo">
 		<ul class="navlist">
+			<li><a href="../index.html">IEEE-VIT</a></li>
 			<li><a href="index.php">Home</a></li>
 			<li><a href="sessions.php">Sessions</a></li>
-			<li><a href="registration.php" class="active">Take a Session</a></li>
-			<li><a href="about.php">About Us</a></li>
+			<li><a href="registration.php"  class="active">Take a Session</a></li>
 		</ul>
 		<div class="searchbar">
 			<i class="fa fa-search"></i>
@@ -230,21 +230,7 @@
                     </a>
                 </div>');
         }
-        echo '<div class="subscribe">
-                <h2>Subscribe</h2>
-                <p>to receive regular updates by email</p>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-user"></i>
-                    <input type = "text" id = "subscriberName" placeholder = "Your Name"/>
-                </div>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-envelope"></i>
-                    <input type = "text" id = "subscriberEmail" placeholder = "Your E-Mail ID"/>
-                </div>
-                <button class = "submitSubscriber"><i class = "fa fa-chevron-right"></i></button>
-                <p class = "subscriberFeedback"></p>
-            </div>
-        </div>';
+        echo '</div>';
 	?>
 	<div class="footer row">
 		<div class="col six contactUs">
@@ -263,16 +249,6 @@
 			<p>&copy; 2014 Copyright, IEEE VIT</p>
 		</div>
 	</div>
-
-    <div class="dialog-box-container">
-        <div class="dialog-box-shade"></div>
-        <div class="dialog-box">
-            <h2>Thanks for subscribing!</h2>
-            <p>Please confirm your email id with confirmation link sent to your mail. This mail may go to your spam folder because of some technical reasons. If it is in spam folder then report not as spam.</p>
-            <div class="close-button">Close</div>
-        </div>
-    </div>
-
 <!--------------------------Scripts--------------------------------->
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="js/site-js.js" type="text/javascript"></script>

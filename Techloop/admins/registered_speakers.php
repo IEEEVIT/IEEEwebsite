@@ -2,7 +2,7 @@
 	session_start();
 	if(!isset($_SESSION['login_user'])) {
 		header("location: index.php");
-	} else if ($_SESSION['login_user']!="techloop_admin") {
+	} else if ($_SESSION['login_user']!="ieee_admin") {
 		header("location: index.php");
 	}
 ?>

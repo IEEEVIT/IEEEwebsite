@@ -22,12 +22,12 @@
 	$conn->query($sql);
 	
 	//status bit is defaulted to NULL. only email inserted now. Rest after confirmation is received.
-	$sql="INSERT INTO mailinglist(email) VALUES('$to_address');";
+	$sql="INSERT INTO mailinglist(name,regno,email,phone) VALUES('$name','$regno','$to_address','$phone');";
 	if($conn->query($sql))
 	{
 		//successfully added in list, with status=0 (unconfirmed)
 		
-		$confirm_link='<a href="http://localhost/ieee_new_website/subscribe.php?flag=subscribe&regno='.$to_address.'>Confirm</a>';
+		$confirm_link='<a href="http://localhost/localIEEEWebsite/subscribe.php?flag=subscribe&regno='.$regno.'>Confirm</a>';
 		$message="<html><body><p> Click confirm to confirm subscription. </p><p>".$confirm_link."</p></body></html>";
 		$subject="Subscription Comfirmation";
 		

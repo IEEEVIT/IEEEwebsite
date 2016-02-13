@@ -29,7 +29,7 @@
 	$prev=$i-1;
 	$current=$i;
 		
-	function getRating($sessionId){
+	/*function getRating($sessionId){
         require('connect_database.php');
 		$result=mysqli_query($link, "SELECT rating FROM sessions WHERE ID='$sessionId'");
 		$arr=mysqli_fetch_array($result);
@@ -58,7 +58,7 @@
         require('connect_database.php');
 		$getID = $_REQUEST['idd'];
 		$upd = mysqli_query($link, "UPDATE sessions SET followers=followers+1 WHERE id='$getID'");
-	}
+	}*/
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js">
@@ -87,10 +87,10 @@
 		<i class="fa fa-bars menu"></i>
 		<img src="img/small-logo.png" alt="Small Logo" class="small-logo">
 		<ul class="navlist">
+			<li><a href="../index.html">IEEE-VIT</a></li>
 			<li><a href="index.php">Home</a></li>
-			<li><a href="sessions.php" class="active">Sessions</a></li>
+			<li><a href="sessions.php"  class="active">Sessions</a></li>
 			<li><a href="registration.php">Take a Session</a></li>
-			<li><a href="about.php">About Us</a></li>
 		</ul>
 		<div class="searchbar">
 			<i class="fa fa-search"></i>
@@ -105,20 +105,6 @@
 			 		<h2>Register Now</h2>
 				</a>
 			</div>
-            <div class="subscribe">
-                <h2>Subscribe</h2>
-                <p>to receive regular updates by email</p>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-user"></i>
-                    <input type = "text" id = "subscriberName" placeholder = "Your Name"/>
-                </div>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-envelope"></i>
-                    <input type = "text" id = "subscriberEmail" placeholder = "Your E-Mail ID"/>
-                </div>
-                <button class = "submitSubscriber"><i class = "fa fa-chevron-right"></i></button>
-                <p class = "subscriberFeedback"></p>
-            </div>
 		</div>
 		<?php
 			if($current!=$n){
@@ -158,35 +144,6 @@
 							 '.$arr["description"].'
 						</p>
 					</div>
-					<div class="col ten offset-2 review">
-						<div class="col six">
-							<div class="col six groupR">
-								<p class="revD1">
-									Rating: <span id="ratingS'.intval($arr["id"]).'">'.$rating.'</span>/5
-								</p>
-							</div>
-							<div class="col six groupR">
-								<p class="revD2">
-									<span id="followersS'.intval($arr["id"]).'">'.$followers.'</span> Followers
-								</p>
-							</div>
-						</div>
-						<div class="col six">
-							<div class="col six">
-								<div class="rating" id="rS'.intval($arr["id"]).'">
-									<i class="fa fa-star-o r1" onclick="rate(1,'.intval($arr["id"]).')"></i>
-									<i class="fa fa-star-o r2" onclick="rate(2,'.intval($arr["id"]).')"></i>
-									<i class="fa fa-star-o r3" onclick="rate(3,'.intval($arr["id"]).')"></i>
-									<i class="fa fa-star-o r4" onclick="rate(4,'.intval($arr["id"]).')"></i>
-									<i class="fa fa-star-o r5" onclick="rate(5,'.intval($arr["id"]).')"></i>
-									<p>Rate Session</p>
-								</div>
-							</div>
-							<div class="col six">
-								<button id="followS'.intval($arr["id"]).'" onclick="follow('.intval($arr["id"]).')">Follow</button>
-							</div>	
-						</div>
-					</div>
 				</div>	
 			</div>');}
 		?>
@@ -198,8 +155,8 @@
 			for($i=$current-1;$i>=0;$i--) {
 				$result=mysqli_query($link, "SELECT * FROM sessions WHERE id='$id[$i]'");
 				$arr=mysqli_fetch_array($result, MYSQLI_ASSOC);
-				$rating = getRating(intval($arr['id']));
-				$followers = getFollowers(intval($arr['id']));
+				/*$rating = getRating(intval($arr['id']));
+				$followers = getFollowers(intval($arr['id']));*/
 				echo('
 				<div class="col nine">
 					<div class="session clearfix">
@@ -229,31 +186,8 @@
 						</div>
 						<div class="col ten offset-2 review">
 							<div class="col six">
-								<div class="col six groupR">
-									<p class="revD1">
-										Rating: <span id="ratingS'.intval($arr["id"]).'">'.$rating.'</span>/5
-									</p>
-								</div>
-								<div class="col six groupR">
-									<p class="revD2">
-										<span id="followersS'.intval($arr["id"]).'">'.$followers.'</span> Followers
-									</p>
-								</div>
 							</div>
 							<div class="col six">
-								<div class="col six">
-									<div class="rating" id="rS'.intval($arr["id"]).'">
-										<i class="fa fa-star-o r1" onclick="rate(1,'.intval($arr["id"]).')"></i>
-										<i class="fa fa-star-o r2" onclick="rate(2,'.intval($arr["id"]).')"></i>
-										<i class="fa fa-star-o r3" onclick="rate(3,'.intval($arr["id"]).')"></i>
-										<i class="fa fa-star-o r4" onclick="rate(4,'.intval($arr["id"]).')"></i>
-										<i class="fa fa-star-o r5" onclick="rate(5,'.intval($arr["id"]).')"></i>
-										<p>Rate Session</p>
-									</div>
-								</div>
-								<div class="col six">
-									<button id="followS'.intval($arr["id"]).'" onclick="follow('.intval($arr["id"]).')">Follow</button>
-								</div>	
 							</div>
 						</div>');
 						if($arr["content"]) {
@@ -292,15 +226,6 @@
 			<p>&copy; 2014 Copyright, IEEE VIT</p>
 		</div>
 	</div>
-
-    <div class="dialog-box-container">
-        <div class="dialog-box-shade"></div>
-        <div class="dialog-box">
-            <h2>Thanks for subscribing!</h2>
-            <p>Please confirm your email id with confirmation link sent to your mail. This mail may go to your spam folder because of some technical reasons. If it is in spam folder then report not as spam.</p>
-            <div class="close-button">Close</div>
-        </div>
-    </div>
 <!--------------------------Scripts--------------------------------->
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="js/site-js.js" type="text/javascript"></script>

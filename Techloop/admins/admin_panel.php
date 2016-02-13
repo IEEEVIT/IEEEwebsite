@@ -2,7 +2,7 @@
 	session_start();
 	if(!isset($_SESSION['login_user'])) {
 		header("location: index.php");
-	} else if ($_SESSION['login_user']!="techloop_admin") {
+	} else if ($_SESSION['login_user']!="ieee_admin") {
 		header("location: index.php");
 	}
 ?>
@@ -36,7 +36,6 @@
 			<a href="add_session.php">Add a Session</a>
 			<a href="delete_session.php">Delete a Session</a>
 			<a href="registered_speakers.php">Registered Speakers</a>
-            <a href="subscribed_users.php">Subscribed Users</a>
 			<a href="change_password.php">Change Password</a>
 		</div>
 		<div class="main col ten">

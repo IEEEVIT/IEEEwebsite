@@ -50,7 +50,6 @@
     <script type='text/javascript' src='bower_components/query-loader/queryloader2.min.js'></script>
 </head>
 <body>
-    <div id="qLoverlay"></div>
 	<div class="banner">
 		<a href="index.php"><img src="img/techloop-logo.png" alt="Techloop Logo" class="logo"></a>
 	</div>
@@ -58,10 +57,10 @@
 		<i class="fa fa-bars menu"></i>
 		<img src="img/small-logo.png" alt="Small Logo" class="small-logo">
 		<ul class="navlist">
+			<li><a href="../index.html">IEEE-VIT</a></li>
 			<li><a href="index.php" class="active">Home</a></li>
 			<li><a href="sessions.php">Sessions</a></li>
 			<li><a href="registration.php">Take a Session</a></li>
-			<li><a href="about.php">About Us</a></li>
 		</ul>
 		<div class="searchbar">
 			<i class="fa fa-search"></i>
@@ -78,24 +77,11 @@
 		<div class="col three">
 			<div class="takeS">
 				<a href="registration.php">
-					<img src="img/speakerposter.png" alt="Take a Session Poster">
+					<img src="img/speakerposter.jpg" alt="Take a Session Poster">
 			 		<h2>Register Now</h2>
 				</a>
 			</div>
-            <div class="subscribe">
-                <h2>Subscribe</h2>
-                <p>to receive regular updates by email</p>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-user"></i>
-                    <input type = "text" id = "subscriberName" placeholder = "Your Name"/>
-                </div>
-                <div class = "subscribeInput">
-                    <i class = "fa fa-envelope"></i>
-                    <input type = "text" id = "subscriberEmail" placeholder = "Your E-Mail ID"/>
-                </div>
-                <button class = "submitSubscriber"><i class = "fa fa-chevron-right"></i></button>
-                <p class = "subscriberFeedback"></p>
-            </div>
+            
 		</div>
 		<?php
 			$flag = false;
@@ -204,16 +190,6 @@
 			<p>&copy; 2014 Copyright, IEEE VIT</p>
 		</div>
 	</div>
-
-    <div class="dialog-box-container">
-        <div class="dialog-box-shade"></div>
-        <div class="dialog-box">
-            <h2>Thanks for subscribing!</h2>
-            <p>Please confirm your email id with confirmation link sent to your mail. This mail may go to your spam folder because of some technical reasons. If it is in spam folder then report not as spam.</p>
-            <div class="close-button">Close</div>
-        </div>
-    </div>
-
 <!--------------------------Scripts--------------------------------->
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="js/site-js.js" type="text/javascript"></script>

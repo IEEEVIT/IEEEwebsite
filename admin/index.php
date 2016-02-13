@@ -7,25 +7,20 @@
 		}
 		else
 		{
-            require('../connect_database.php');
-			
-			$sql="CREATE TABLE IF NOT EXISTS `admin` (
-			`id` int(11) NOT NULL AUTO_INCREMENT,
-			`username` varchar(30) DEFAULT NULL,
-			`password` varchar(9) DEFAULT NULL,
-			PRIMARY KEY (`id`)
-		    ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
-	        $conn->query($sql);
-			
+            require('../connect_db.php');
 			$username=$_POST['username'];
 			$password=$_POST['password'];
 			$username = $conn->real_escape_string($username);
 			$password = $conn->real_escape_string($password);
-			$result = $conn->query("SELECT * FROM admin WHERE username='$username'");
-			$arr = $conn->fetch_assoc($result);
+			echo $username;
+			echo $password;
+			$result = $conn->query("SELECT * FROM login WHERE username='$username';");
+			echo "Am here.";
+			$arr = $result->fetch_assoc();
             if($arr) {
                 if (password_verify($password, $arr['password'])) {
                     $_SESSION['login_user']=$username;
+					
                     header("location: admin_panel.php");
                 } else {
                     $error = "Wrong Password! Try Again";
@@ -35,9 +30,6 @@
             }
 			$conn->close($link);
 		}
-	}
-	if(isset($_SESSION['login_user']) == "ieee_admin"){
-		header("location: admin_panel.php");
 	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -12,25 +12,22 @@
 <body>
         <a href="logout.php">Log Out</a>
         <a href="admin_panel.php">Dashboard</a>
-        <a href="add_session.php">Add a Session</a>
-        <a href="delete_session.php">Delete a Session</a>
-        <a href="registered_speakers.php">Registered Speakers</a>
-        <a href="subscribed_users.php" class="active">Subscribed Users</a>
-        <a href="change_password.php">Change Password</a>
+        <a href="subscribed_users.php" >Subscribed Users</a>
+		<a href="send_mail.php" >Send Mail</a>
+		<a href="check_contact_messages.php" >Check Contact Messages</a>
         <h2>Subscribed Users</h2><br />
         <?php
-        require('../connect_database.php');
+        require('../connect_db.php');
         $count = 0;
-        $total=$conn->query("SELECT * FROM mailinglist;");
-        while($row = $conn->fetch_assoc()) {
+        $total=$conn->query("SELECT * FROM mailinglist WHERE status=1;");
+        while($row = $total->fetch_assoc()) {
             $count++;
             echo("<div class='user clearfix'>
 					<p class='id'>" . $count . "</p>
 					<p class='name'>" . $row['name']."</p>
 					<p class='email'>" . $row['email']."</p>
 					<p class='regno'>" . $row['regno']."</p>
-					<p class='status'>" . $row['status']."</p>
-				</div>");
+				</div><br />");
         }
         if($count == 0) {
             echo "<p class='warn'>No Users Subscribed!</p>";

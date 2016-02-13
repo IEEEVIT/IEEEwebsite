@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `login` (
 --
 
 INSERT INTO `login` (`id`, `username`, `password`) VALUES
-(1, 'techloop_admin', '$2y$10$xFwik2fcnCI1aNSoqIQ7GuP0vSM0CmdSx6XisllUq0dTeifnj3I0C');
+(1, 'ieee_admin', '$2y$10$BQCC48QPXmpgw4h4bg6enuqJ4LIbXo3JTZgVR6kzBCJtk2PZBAFhK');
 
 -- --------------------------------------------------------
 
