@@ -57,7 +57,7 @@
 		<i class="fa fa-bars menu"></i>
 		<img src="img/small-logo.png" alt="Small Logo" class="small-logo">
 		<ul class="navlist">
-			<li><a href="../index.html">IEEE-VIT</a></li>
+			<li><a href="../index.php">IEEE-VIT</a></li>
 			<li><a href="index.php" class="active">Home</a></li>
 			<li><a href="sessions.php">Sessions</a></li>
 			<li><a href="registration.php">Take a Session</a></li>

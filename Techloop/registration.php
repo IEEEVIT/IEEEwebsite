@@ -63,7 +63,7 @@
 		<i class="fa fa-bars menu"></i>
 		<img src="img/small-logo.png" alt="Small Logo" class="small-logo">
 		<ul class="navlist">
-			<li><a href="../index.html">IEEE-VIT</a></li>
+			<li><a href="../index.php">IEEE-VIT</a></li>
 			<li><a href="index.php">Home</a></li>
 			<li><a href="sessions.php">Sessions</a></li>
 			<li><a href="registration.php"  class="active">Take a Session</a></li>
@@ -225,7 +225,7 @@
         } else {
             echo('<div class="nextS">
                     <a href="registration.php">
-                        <img src="img/speakerposter.png" alt="Take a Session Poster">
+                        <img src="img/speakerposter.jpg" alt="Take a Session Poster">
                         <h2>Register Now</h2>
                     </a>
                 </div>');
