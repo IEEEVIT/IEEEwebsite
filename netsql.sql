@@ -36,14 +36,6 @@ CREATE TABLE IF NOT EXISTS `contactus` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
---
--- Dumping data for table `contactus`
---
-
-INSERT INTO `contactus` (`id`, `name`, `email`, `phone`, `regno`, `message`) VALUES
-(4, 'Akhil Ravipati', 'akhil.ravipati97@gmail.com', '0994493802', '14BCE0900', 'Hi, this is just a ''check'' bro. Hop eits working fine.');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `login`
@@ -56,13 +48,6 @@ CREATE TABLE IF NOT EXISTS `login` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`id`, `username`, `password`) VALUES
-(1, 'ieee_admin', '$2y$10$U8pMQajcxn4qBL9TqNf9meBtrxM4K6tfYcD6TBdF1PlqnHwFNQ92C');
 
 -- --------------------------------------------------------
 
@@ -79,13 +64,6 @@ CREATE TABLE IF NOT EXISTS `mailinglist` (
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
-
---
--- Dumping data for table `mailinglist`
---
-
-INSERT INTO `mailinglist` (`id`, `name`, `regno`, `email`, `phone`, `status`) VALUES
-(41, 'Akhil Ravipati', '14BCE0900', 'powersource97@gmail.com', '9944938038', 1);
 
 -- --------------------------------------------------------
 
